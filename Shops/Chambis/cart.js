@@ -78,27 +78,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-//send the oder to whatsap
-const phoneNumber = "254743998885"
+const phoneNumber = "254743998885";
 
 function sendToWhatsApp() {
-    const cart =JSON.parse(localStorage.getItem('cart')) || []
-    const baseUrl = "https://incomparable-clafoutis-2bf44e.netlify.app/";//Replace with your website URL
-
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const baseUrl = "https://incomparable-clafoutis-2bf44e.netlify.app/"; // Replace with your website URL
 
     let message = 'Hello I would like to order:\n\n';
     cart.forEach(item => {
         message += `(${item.quantity}). ${item.name} - ${item.price} each\n`;
-        // message += `image: ${baseUrl}${item.image}\n\n`; //include image link //full image url
-        message += `image: ${baseUrl}${encodeURIComponent(item.image)}`; 
+        // Encode the image URL to handle spaces or special characters
+        message += `image: ${baseUrl}${encodeURIComponent(item.image)}\n\n`;
     });
-    
+
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message.trim())}`;
     window.open(whatsappUrl, '_blank');
-
-    //clear cart after sending
-    clearCart();
 }
+//send the oder to whatsap
+// const phoneNumber = "254743998885"
+
+// function sendToWhatsApp() {
+//     const cart =JSON.parse(localStorage.getItem('cart')) || []
+//     const baseUrl = "https://incomparable-clafoutis-2bf44e.netlify.app/";//Replace with your website URL
+
+
+//     let message = 'Hello I would like to order:\n\n';
+//     cart.forEach(item => {
+//         message += `(${item.quantity}). ${item.name} - ${item.price} each\n`;
+//         // message += `image: ${baseUrl}${item.image}\n\n`; //include image link //full image url
+//         message += `image: ${baseUrl}${encodeURIComponent(item.image)}`; 
+//     });
+    
+//     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message.trim())}`;
+//     window.open(whatsappUrl, '_blank');
+
+//     //clear cart after sending
+//     clearCart();
+// }
 
 
 document.querySelector('.purchase').addEventListener('click', sendToWhatsApp);
