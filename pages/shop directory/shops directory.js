@@ -1,6 +1,6 @@
 
 let shops = null;
-const baseUrl ="http://127.0.0.1:5502/"
+const baseUrl ="https://incomparable-clafoutis-2bf44e.netlify.app/"
 
 // Fetch shops from JSON file
 fetch('shops.json') 
