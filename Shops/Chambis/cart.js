@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-const phoneNumber = "254743998885";
+const phoneNumber = "254769047082";
 
 function sendToWhatsApp() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
