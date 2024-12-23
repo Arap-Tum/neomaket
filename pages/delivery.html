@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoMkrt - How We Deliver</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="/Src/style/how we deliver.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <!-- <img src="/api/placeholder/100/50" alt="NeoMkrt Logo" class="logo"> -->
+            <h1 class="page-title">How We Deliver</h1>
+        </header>
+
+        <!-- Delivery Methods Section -->
+        <section class="section">
+            <h2 class="section-title">Delivery Methods</h2>
+            <div class="delivery-methods">
+                <div class="delivery-method">
+                    <div class="delivery-icon">📱</div>
+                    <h3>WhatsApp Direct</h3>
+                    <p>Sellers manage delivery directly through WhatsApp</p>
+                </div>
+                <div class="delivery-method">
+                    <div class="delivery-icon">🚚</div>
+                    <h3>Local Courier</h3>
+                    <p>Partnering with local delivery services</p>
+                </div>
+                <div class="delivery-method">
+                    <div class="delivery-icon">🏡</div>
+                    <h3>Seller Pickup</h3>
+                    <p>Option to collect directly from the seller</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Delivery Process Section -->
+        <section class="section">
+            <h2 class="section-title">Delivery Process</h2>
+            <div class="delivery-process">
+                <div class="delivery-step">
+                    <div class="delivery-step-icon">1</div>
+                    <h3>Browse Products</h3>
+                    <p>Explore shops on NeoMkrt</p>
+                </div>
+                <div class="delivery-step">
+                    <div class="delivery-step-icon">2</div>
+                    <h3>Confirm Order</h3>
+                    <p>Send order via WhatsApp</p>
+                </div>
+                <div class="delivery-step">
+                    <div class="delivery-step-icon">3</div>
+                    <h3>Seller Processes</h3>
+                    <p>Confirm payment and delivery</p>
+                </div>
+                <div class="delivery-step">
+                    <div class="delivery-step-icon">4</div>
+                    <h3>Product Delivery</h3>
+                    <p>Receive your product</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Plans Section -->
+        <section class="section">
+            <div class="future-plans">
+                <h2 class="section-title">Future Delivery Plans</h2>
+                <p>We're working on expanding our delivery options to make shopping even more convenient. Stay tuned for:</p>
+                <ul>
+                    <li>Wider courier service partnerships</li>
+                    <li>In-house delivery for select regions</li>
+                    <li>Faster delivery tracking</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Call to Action Buttons -->
+        <div class="cta-buttons">
+            <a href="/pages/shop reg.html" class="cta-btn">Become a seller</a>
+            <a href="/pages/shop directory/shop pages.html" class="cta-btn">Explore Shops</a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>NeoMkrt Delivery Information</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Delivery Policy</a>
+                <a href="#" class="footer-link">FAQ</a>
+                <a href="#" class="footer-link">Contact Us</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Interactive elements
+        document.querySelectorAll('.delivery-method').forEach(method => {
+            method.addEventListener('click', () => {
+                method.classList.toggle('active');
+            });
+        });
+
+        // CTA Button Interactivity
+        document.querySelectorAll('.cta-btn').forEach(btn => {
+            btn.addEventListener('mouseenter', (e) => {
+                e.target.style.transform = 'scale(1.05)';
+            });
+            btn.addEventListener('mouseleave', (e) => {
+                e.target.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

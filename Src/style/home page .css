@@ -1,0 +1,278 @@
+
+:root {
+    --gold: #D4AF37;
+    --sky-blue: #87CEEB;
+    --dark-blue: #2C3E50;
+    --light-gray: hsl(0, 0%, 96%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-blue);
+}
+
+/* header style */
+header {
+    background: linear-gradient(135deg, var(--gold), white);
+    padding: 20px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow:  0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+
+/* 
+we have the nav bae and search bar input styling here 
+
+*/
+
+.whatsapp-cta {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, var(--sky-blue), white);
+}
+
+.hero h1 {
+    font-size:  3rem;
+    margin-bottom: 20px;
+    color: var(--dark-blue);
+}
+
+
+
+.cta-button {
+    display: inline;
+    background-color: var(--gold);
+    color: white;
+    margin-bottom: 5px;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-top: auto;
+    
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover{
+    background-color: #B48700;
+}
+
+/* Feautured shop */
+.featured-shops {
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+/* Product carousel style */
+
+/* product Higlight */
+.product-carousel .trending-product {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product-carousel {
+    background-color: var(--light-gray);
+    padding: 50px 0;
+}
+
+.product-grid {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+     height: auto; 
+    gap: 15px;
+    /* width: 100%; */
+    overflow-x: auto;
+    scrollbar-width: thin;
+    
+   
+}
+
+.product-card {
+    background-color: white;
+    width: 225px;
+    flex: 0 0 auto; /*prevent shrinking */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+
+.product-card img {
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-card .add-to-cart {
+    background-color: var(--gold);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+ .product-card .add-to-cart:hover {
+    background-color: #B48700
+}
+.product-card .price {
+  
+    padding-left: 15px;
+    font-weight: 900;
+    font-size: 15px;
+    letter-spacing: 5px;
+    color: #B48700;
+  }
+
+  .product-card .shop {
+    font-size: 13px;
+  }
+ /* responsive for devises  */
+ @media(max-width: 600px) {
+    .product-grid {
+        scrollbar-width: none;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .product-card{
+        width: 200px; 
+    }
+ }
+
+
+/* Category Navigation */
+.category-nav {
+    text-align: center;
+    padding:  50px 0;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    max-width:  1200px;
+    margin: 0 auto;
+}
+
+.category-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rga(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3 ease;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+}
+
+.cateory-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* How NeoMkt  Works */
+.how-it-works {
+    background-color: var(--light-gray);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.step {
+    flex: 1;
+    padding: 20px;
+}
+
+.step i {
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.testimonials-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+
+/* responsive desighn */
+@media (max-width: 500px) {
+    .shops-grid, .product-grid, .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .shop-card {
+        padding: 15px;
+    }
+    .shop-card p{
+        font-size: clamp(0.75rem, 3vw, 0,9rem);
+    }
+    .steps-container {
+        flex-direction: column;
+    }
+
+   
+}

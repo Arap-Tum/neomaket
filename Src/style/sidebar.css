@@ -1,0 +1,285 @@
+/* styling the header  */
+header {
+    position: absolute;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: goldenrod;
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    background: linear-gradient(rgba(218, 165, 32, 0.9), rgba(218, 165, 32, 0.1) );
+    color: #fff;
+    z-index: 1000;
+ }
+
+    /* Apply blur effect for the header  */
+    @supports (backdrop-filter: blur(10px)) {
+        header {
+            backdrop-filter: blur(10px);
+        }
+    }
+:root {
+/* Gold Color Palette */
+--gold-primary: #D4AF37;
+--gold-light: #F0E68C;
+--gold-dark: #BF9B30;
+--gold-alpha-10: rgba(212, 175, 55, 0.1);
+--gold-alpha-20: rgba(212, 175, 55, 0.2);
+--gold-alpha-50: rgba(212, 175, 55, 0.5);
+
+/* Neutral Colors */
+--white: #FFFFFF;
+--off-white: #F7F7F7;
+--gray-100: #F5F5F5;
+--gray-200: #E5E5E5;
+--gray-300: #D1D1D1;
+--black: #121212;
+}
+
+/* sidebar styling */
+.sidebar {
+position: fixed;
+top: 0;
+left: -300px;
+width: 300px;
+height: 100vh;
+background-color: var(--white);
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease-in-out;
+z-index: 1000;
+overflow-y: auto;
+border-right: 2px solid var(--gold-alpha-20);
+}
+
+ .sidebar.active {
+top: 25px;
+left: 0;
+} 
+
+.sidebar-content {
+padding: 30px 20px;
+}
+
+.nav {
+margin-bottom: 20px;
+}
+
+.menu {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+
+.menu .top {
+position: relative;
+margin-bottom: 10px;
+}
+
+.menu .top > a {
+display: flex;
+align-items: center;
+text-decoration: none;
+color: var(--black);
+padding: 12px 15px;
+border-radius: 8px;
+transition: all 0.2s ease;
+position: relative;
+overflow: hidden;
+}
+
+.menu .top > a:hover {
+background-color: var(--gold-alpha-10);
+color: var(--gold-dark);
+}
+
+.menu .top > a .icon {
+margin-right: 12px;
+font-size: 20px;
+color: var(--gold-primary);
+transition: color 0.2s ease;
+}
+
+.menu .top > a:hover .icon {
+color: var(--gold-dark);
+}
+
+.menu .top > a .text {
+font-weight: 500;
+font-size: 15px;
+}
+
+.menu .top > a .arrow {
+margin-left: auto;
+transition: transform 0.2s ease;
+}
+
+.menu .top.active > a .arrow {
+transform: rotate(180deg);
+}
+
+.sub-menu {
+display: none;
+list-style-type: none;
+padding-left: 20px;
+background-color: var(--gray-100);
+border-radius: 8px;
+margin-top: 10px;
+}
+
+.menu .top.active .sub-menu {
+display: block;
+animation: slideDown 0.3s ease;
+}
+
+.sub-menu li a {
+display: block;
+padding: 10px 15px;
+text-decoration: none;
+color: var(--black);
+font-size: 14px;
+transition: background-color 0.2s ease;
+border-radius: 6px;
+}
+
+.sub-menu li a:hover {
+background-color: var(--gold-alpha-20);
+color: var(--gold-dark);
+}
+
+@keyframes slideDown {
+from {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+/* Toogle button*/
+.toggle-btn {
+    /* position: absolute; */
+ position: fixed;  
+ top: 15px; /* Adjust toggle button */
+ left: 15px;
+ z-index: 1100; 
+ color: #393838;
+ padding: 10px; 
+
+ cursor: pointer;
+ transition: all 0.3s ease-in-out;
+}
+
+.toggle-btn:hover {
+/* background-color: var(--gold-alpha-20); */
+color: black;
+transform: scale(1.05);
+}
+
+.remove-sidebar:hover
+{
+    transform: scale(1.08);
+    cursor: pointer;
+}
+/* Submenu Scrollbar */
+.sub-menu {
+max-height: 200px; /* Limit height */
+overflow-y: auto; /* Enable vertical scrolling */
+scrollbar-width: thin; /* For Firefox: thin scrollbar */
+scrollbar-color: var(--gold-primary) var(--gray-100); /* For Firefox */
+}
+
+.sub-menu::-webkit-scrollbar {
+width: 6px; /* Thinner scrollbar */
+}
+
+.sub-menu::-webkit-scrollbar-thumb {
+background-color: var(--gold-primary);
+border-radius: 4px;
+}
+
+.sub-menu::-webkit-scrollbar-track {
+background-color: var(--gray-100);
+}
+
+/* Scrollbar Styling */
+.sidebar::-webkit-scrollbar {
+width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+background: var(--gray-100);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+background: var(--gold-primary);
+border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+background: var(--gold-dark);
+}
+
+/* Styles for screens up to 480px (small screens) */
+@media screen and (max-width: 480px) {
+.sidebar {
+    width: 100%; /* Full-width sidebar */
+    left: -100%; /* Hide sidebar initially */
+    top: 0; /* Remove extra offset */
+}
+
+.sidebar.active {
+    left: 0; /* Show sidebar */
+}
+
+.toggle-btn {
+    top: 10px; /* Adjust toggle button for small screens */
+    left: 10px; /* Adjust toggle button for small screens */
+}
+
+.menu .top > a {
+    padding: 10px 12px; /* Reduce padding for smaller buttons */
+}
+
+.menu .top > a .icon {
+    font-size: 18px; /* Smaller icon size */
+}
+
+.menu .top > a .text {
+    font-size: 14px; /* Smaller font size */
+}
+}
+
+/* Styles for screens up to 780px (tablets) */
+@media screen and (max-width: 780px) {
+.sidebar {
+    width: 250px; /* Slightly narrower sidebar */
+    left: -250px; /* Adjust to fit width */
+}
+
+.toggle-btn {
+    top: 15px; /* Adjust toggle button */
+    left: 15px; /* Adjust toggle button */
+}
+
+.menu .top > a {
+    padding: 12px 14px; /* Slightly smaller padding */
+}
+
+.menu .top > a .icon {
+    font-size: 19px; /* Adjust icon size */
+}
+
+.menu .top > a .text {
+    font-size: 15px; /* Adjust font size */
+}
+
+.sub-menu {
+    max-height: 150px; /* Limit height further for tablets */
+}
+}
+
+

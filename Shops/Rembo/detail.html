@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+     <!-- ICONS 2 -->
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+       <!-- Icons -->
+   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+   
+   <link rel="stylesheet" href="/Src/style/top-bar.css">
+   <link rel="stylesheet" href="/Src/style/detail.css">
+   <link rel="stylesheet" href="/Src/style/effects.css">
+</head>
+<body>
+  <div class="top-container">
+       <header>
+            <div class="logo">
+            <img src="" alt="">
+           </div> 
+      </header>
+
+      <!-- The top bar for detail page  -->
+      <div class="top-bar">
+          <div class="exit">
+            <span class="back-arrow" onclick="goBack()"><i class="arrow ph-bold ph-caret-left"></i></span> 
+          </div>
+         <a class="cart" href="cart.html">
+        <i class="icon ph-bold ph-shopping-cart"></i>
+        <span class="cart-count">0</span>
+          </a>
+      </div>
+</div>
+    <!-- details content -->
+    <div class="detail">
+        <div class="image">
+             <img src="" alt="">
+         </div>
+         <div class="content">
+            <h1 class="name"></h1>
+            <div class="price"></div>
+            <div class="description"></div>
+            <p class="stock"></p>
+     
+            <button class="addCart"> Add to cart <i class="icon ph-bold ph-shoping-cart"></i></button>
+              
+            <div class="reviews">
+               <p>Customer Reviews</p>
+               <span class="stars">★★★★☆</span>
+               
+             </div>
+          
+         <div class="shop"></div>
+      </div> 
+
+    </div>  
+
+      <!-- Similar products -->
+      <div class="title">You May Also like</div>
+      <div class="listProduct"></div>
+
+      <!-- noyification of succesfully added to cart  -->
+      <div id="successNotification" class="notification">
+        <div class="circle"></div>
+        <div class="message"></div>
+      </div>
+
+      
+
+      <!-- success notification  -->
+    <div id="successNotification" class="notification">
+      <div class="circle"></div>
+      <div class="message"></div>
+  </div>
+
+  <!-- <script src="Script.js"></script> -->
+  <script src="detail.js"></script>
+  <script src="/Src/script/successNotication.js"></script>
+
+</body>
+</html>

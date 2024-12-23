@@ -1,0 +1,52 @@
+/* scroll bar */
+.scroll-bar {
+    height: auto;
+    width: 100%;
+    margin-bottom: 10px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    background-color: #fff; 
+    
+  }
+  
+  .scroll-bar::-webkit-scrollbar {
+   height: 2px;
+  }
+  
+ 
+  .categories  {
+    padding: 10px;
+     display: flex;
+     justify-content: space-between;
+  }
+ 
+  .category-item {
+    padding: 15px;
+    color: #393838;
+      
+     
+  }
+  .category-item:hover{
+   cursor: pointer;
+    color: #000;
+    transform: scale(1.05);
+  }
+
+   /* phones */
+ @media(max-width: 600px) {
+   .scroll-bar{
+         scrollbar-width: none;
+       }
+        
+        
+    
+     .scroll-bar{
+       width: 100%;
+       
+     }
+     .category-item {
+       padding: 10px;
+       font-size: 10px;
+     }
+  } 
+ 

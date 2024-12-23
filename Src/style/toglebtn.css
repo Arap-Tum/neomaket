@@ -1,0 +1,42 @@
+.toggle-btn {
+ position: fixed;  
+ top: 15px; /* Adjust toggle button */
+ left: 15px;
+ z-index: 5000; 
+ color: #393838;
+ padding: 10px; 
+
+ cursor: pointer;
+ transition: all 0.3s ease-in-out;
+}
+
+.toggle-btn:hover {
+    color: black;
+    transform: scale(1.05);
+}
+/* sidebar styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--white);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    overflow-y: auto;
+    border-right: 2px solid var(--gold-alpha-20);
+    }
+    
+     .sidebar.active {
+    top: 25px;
+    left: 0;
+    } 
+
+    @media screen and (max-width: 780px) {
+        .sidebar {
+            width: 250px; /* Slightly narrower sidebar */
+            left: -250px; /* Adjust to fit width */
+        }
+    }

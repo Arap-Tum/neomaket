@@ -1,0 +1,170 @@
+
+:root {
+    --gold-accent: #D4AF37;
+    --sky-blue-light: #F0F8FF;
+    --black-text: #333333;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, var(--white), var(--sky-blue-light));
+    color: var(--black-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--gold-accent);
+}
+
+.logo {
+    height: 50px;
+}
+
+.page-title {
+    color: var(--gold-accent);
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 3rem;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    color: var(--gold-accent);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.section-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.section-text {
+    flex: 1;
+}
+
+.section-icon {
+    width: 100px;
+    height: 100px;
+    background-color: var(--gold-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 2rem;
+}
+
+/* CTA Button Styles */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cta-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--gold-accent);
+    background-color: var(--white);
+    color: var(--gold-accent);
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: var(--gold-accent);
+    color: var(--white);
+}
+
+/* Step Process Styles */
+.step-process {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.step {
+    text-align: center;
+    flex: 1;
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--gold-accent);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1.5rem;
+    text-align: center;
+    border-top: 1px solid var(--gold-accent);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    color: var(--gold-accent);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .step-process {
+        flex-direction: column;
+    }
+}

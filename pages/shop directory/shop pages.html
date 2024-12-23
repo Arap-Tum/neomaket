@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Directory </title>
+
+
+      <!-- Icons -->
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+      <script src="https://unpkg.com/@phosphor-icons/web"></script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+   
+     
+        <!-- style sheet -->
+         <link rel="stylesheet" href="/Src/style/category bar.css">
+      <link rel="stylesheet" href="/Src/style/shops page.css">
+</head>
+<body>
+    
+
+
+<div class="container">
+    <header class="header">
+        <!-- search bar and categories container -->
+        <div class="search-container">
+           <input type="text" class="search-bar" id="searchInput" placeholder="Search for shops, or categories...">
+         
+           <button class="search-button">Search</button>
+        </div>  
+        <div class="scroll-bar">
+            <div class="categories">
+                <div class="category-item">All</div>
+                <div class="category-item">Jewlery</div>
+                <div class="category-item">Cosmetic </div>
+                <div class="category-item">Beauty</div>
+                <div class="category-item">Toys</div> 
+                <div class="category-item">Clothes</div> 
+            </div>
+         </div>
+      
+    </header>
+    <main class="shops-grid" id="shopsGrid">
+        <!-- Shop containers will be dynamically populated -->
+    </main>
+
+    <div class="back-to-top" id="backToTop">↑</div>
+</div>    
+   
+
+ <script src="shops directory.js"></script>
+
+</body>
+</html>

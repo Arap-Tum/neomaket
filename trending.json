@@ -1,0 +1,45 @@
+[
+    {
+        "name":"Arben B",
+        "img": "img-trending/WhatsApp Image 2024-12-10 at 14.32.10_a86eb002.jpg",
+        "price": "Ksh 100",
+        "description" : "Small, size 2-4, polyester, Spandex",
+        "shop": "Chambis store"
+    },
+    {
+        "name":"Watch",
+        "img": "img-trending/watch 1.jpg",
+        "price": ".0",
+        "description" : "talk with the seler",
+        "shop": "Rembo hub"
+    },
+    {
+        "name":"Shein",
+        "img": "img-trending/shein 3.jpg",
+        "price": "Ksh 100",
+        "description" : "XL 10-14 Meshy",
+        "shop": "Chambis store"
+    },
+    {
+        "name":"Watch",
+        "img": "img-trending/watch 4.jpg",
+        "price": "0.0",
+        "description" : "talk with the seler",
+        "shop": "Rembo hub"
+    },
+    {
+        "name":"Arben B",
+        "img": "img-trending/Topshop.jpg",
+        "price": "Ksh 350",
+        "description" : "Small, 2-4 Polyster",
+        "shop": "Chambis store"
+    },
+    {
+        "name":"Watch",
+        "img": "img-trending/watch 2.jpg",
+        "price": "0.0",
+        "description" : "talk with the seler",
+        "shop": "Rembo hub"
+    }
+    
+]

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+     <!-- Icons -->
+   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="/Src/style/cart.css">
+    <link rel="stylesheet" href="/Src/style/top-bar.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="" alt="">
+        </div>
+    </header>
+
+        <div class="top-bar">
+            <div class="exit">
+                <span class="back-arrow" onclick="goBack()"><i class="arrow ph-bold ph-caret-left"></i></span> 
+           </div>
+           
+        </div>
+
+        <button class="clear-cart" onclick="clearCart()">Clear Cart <i class="icon"></i></button>
+            
+
+   
+         <!-- Cart items -->
+     <div class="my-cart">
+        <h1>Your Shopping Cart</h1>
+        <div class="cart-items"></div>
+        <div class="total">
+            <span>Total Price: </span>
+            <span class="total-price"> ksh 0.00</span>
+        </div>
+        <button class="purchase">Review and Purchase</button>
+     </div>
+   
+ 
+    
+    <script src="cart.js"></script>
+</body>
+</html>

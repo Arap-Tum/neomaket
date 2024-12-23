@@ -1,0 +1,85 @@
+[
+    {
+        "id": 1,
+        "number":2,
+        "name": "Arben B",
+        "price":"100",
+        "image":"img/Arben B.jpg",
+        "description":"Small, Size 2-4, Polyester,  Spandex",
+        "category":"women"
+    },
+    {
+        "id": 2,
+        "number":2,
+        "name": "Banana Republic",
+        "price":" 100",
+        "image":"img/Banana republic 2.jpg",
+        "description":" Medium Meshy",
+        "category":"women"
+    },
+    {
+        "id": 3,
+        "number":3,
+        "name": "Banana Republic",
+        "price":"100",
+        "image":"img/Banana republic.jpg",
+        "description":"Small, 2-4, cotton",
+        "category":"women"
+    },
+    {
+        "id": 4,
+        "number":4,
+        "name": "Danskin",
+        "price":"100",
+        "image":"img/Daskin.jpg",
+        "description":"Lrge, 8-10",
+        "category":"women"
+    },
+    {
+        "id": 5,
+        "number":4,
+        "name": "Divided H&M",
+        "price":"100",
+        "image":"img/Devided H&M.jpg",
+        "description":"Large, 8-10, Meshy",
+        "category":" women"
+    },
+    {
+        "id": 6,
+        "number":2,
+        "name": "Free Kisses",
+        "price":"100",
+        "image":"img/free kisses.jpg",
+        "description":"small, 2-4, Meshy",
+        "category":"women "
+    },
+    {
+        "id": 7,
+        "number":4,
+        "name": "J.Crew",
+        "price":"100",
+        "image":"img/J.Crew.jpg",
+        "description":"Meduim, 6-8, Meshy",
+        "category":"women"
+    },
+    {
+        "id": 8,
+        "number":2,
+        "name": "Shein",
+        "price":"100",
+        "image":"img/shein .jpg",
+        "description":"small, 10-12, Meshy",
+        "category":"women "
+    },
+    {
+        "id": 9,
+        "number":2,
+        "name": "Topshop",
+        "price":"350",
+        "image":"img/Topshop.jpg",
+        "description":"small, Polyester",
+        "category":"women"
+    }
+    
+    
+]

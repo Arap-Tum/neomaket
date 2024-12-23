@@ -1,0 +1,220 @@
+
+:root {
+    --gold-accent: #D4AF37;
+    --sky-blue-light: #F0F8FF;
+    --black-text: #333333;
+    --white: #FFFFFF;
+    --subtle-border: #E0E0E0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, var(--white), var(--sky-blue-light));
+    color: var(--black-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--gold-accent);
+}
+
+.logo {
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.page-title {
+    color: var(--gold-accent);
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 3rem;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    color: var(--gold-accent);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.section-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.section-text {
+    flex: 1;
+}
+
+.delivery-methods {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.delivery-method {
+    text-align: center;
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid var(--subtle-border);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.delivery-method:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+    transform: scale(1.05);
+}
+
+.delivery-icon {
+    font-size: 3rem;
+    color: var(--gold-accent);
+    margin-bottom: 1rem;
+}
+
+/* Delivery Process Styles */
+.delivery-process {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.delivery-step {
+    text-align: center;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.delivery-step-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--gold-accent);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.delivery-process::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--gold-accent);
+    z-index: 1;
+}
+
+/* Future Plans Styles */
+.future-plans {
+    border-top: 2px dotted var(--gold-accent);
+    padding-top: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cta-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--gold-accent);
+    background-color: var(--white);
+    color: var(--gold-accent);
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: var(--gold-accent);
+    color: var(--white);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1.5rem;
+    text-align: center;
+    border-top: 1px solid var(--gold-accent);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-link {
+    color: var(--gold-accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .delivery-methods {
+        flex-direction: column;
+    }
+
+    .delivery-process {
+        flex-direction: column;
+    }
+
+    .delivery-step {
+        margin-bottom: 2rem;
+    }
+
+    .delivery-process::before {
+        top: 0;
+        left: 50%;
+        width: 2px;
+        height: 100%;
+    }
+}

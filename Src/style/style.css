@@ -1,0 +1,259 @@
+
+ body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "poppins", sans-serif;
+    max-width: 100vw;
+    overflow-x: hidden;
+ }
+
+ header .logo {
+  padding: 5px;
+  color: var(--dark-blue);
+  font-weight: 900;
+  font-size: large;
+ }
+
+
+.top-container {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100dvw;
+    padding: 10px;
+    margin-top: 3rem;
+
+}
+
+
+/* styling the header  */
+header {
+  position: absolute;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: goldenrod;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  background: linear-gradient(rgba(218, 165, 32, 0.9), rgba(218, 165, 32, 0.1) );
+  color: #fff;
+  z-index: 1000;
+}
+
+  /* Apply blur effect for the header  */
+  @supports (backdrop-filter: blur(10px)) {
+      header {
+          backdrop-filter: blur(10px);
+      }
+  }
+    /* Apply blur effect for the header  */
+    @supports (backdrop-filter: blur(10px)) {
+        header {
+            backdrop-filter: blur(10px);
+        }
+    }
+    
+
+
+/* The search bar and the cart  */
+ .top-bar {
+  background-color: #f7f7f7;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   padding: 10px  20px;
+   width: 100%;
+   height: auto;
+   margin-bottom: 10px;
+   
+ }
+ 
+ /* Search bar  */
+ .search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  position: relative;
+  gap: 5px; /*Space btwn the input and the button */
+ }
+
+ .search-bar input {
+  width: 800px;
+  padding: 12px;
+  background-color: #fff;
+  border: 2px solid rgba(218, 165, 32, 0.5);
+  border-radius: 15px;
+  font-size: 10px;
+  outline: none;
+  padding: 12px;
+  transition: boder-color 0.3s ease;
+  
+ }
+.search-icon {
+  position: absolute;
+  right: 10px;
+  transform: translate(-50%);
+  /* top: 30%; */
+  font-size: 20px;
+  color: gold;
+
+}
+
+ .search-bar input:hover {
+  border: 2px solid gold;
+ }
+ .search-bar button {
+  background-color: none;
+  border: none;
+  cursor: pointer;
+ }
+ .cart .icon {
+  font-size: 1.5rem;
+ }
+ .cart {
+    position: absolute;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+  }
+  .cart-count {
+    background-color: gold;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    margin-left: 5px;
+  }
+ 
+
+
+
+
+
+ /* The exit icon arro */
+.exit .arrow {
+  color: #757575;
+  padding: 20px;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.exit .arrow:hover {
+  color: #000;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+
+/* tablets */ 
+@media  screen and (max-width: 768px) {
+  .top-container{
+    overflow-x: hidden;
+    width: 100svw;
+    align-items: center;
+ }
+
+     .search-bar input {
+
+      width: 320px;
+      font-size: 12px;
+      padding: 13px;
+     }
+     .cart {
+       right: 40px;
+     }
+ 
+ 
+  
+  
+}   
+
+ /* phones */
+ @media(max-width: 500px) {
+
+   .top-container{
+      overflow-x: hidden;
+      width: 100svw;
+      align-items: center;
+   }
+
+   .search-bar {
+    justify-content: flex-start;
+   }
+   
+      
+       .search-bar input {
+
+        width: 220px;
+        font-size: 10px;
+        padding: 12px;
+       }
+       .cart {
+         right: 35px;
+       }
+   
+    
+ } 
+
+ /* Notification  */
+
+.notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,  -50%) scale(0);
+  width: 200px;
+  height: 200px;
+  background-color: #f7f7f7; color: #000;text-align: center;border-radius: 12px;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);opacity: 0;transition: transform 0.3s ease, opacity 0.3s ease; z-index: 1000;
+}
+
+.notification.show {
+  transform: translate(-50%, -50%) scale(1); opacity: 1;
+} .notification .circle { width: 80px; height: 80px;background-color: gold; border-radius: 50%;margin: 20px auto 10px; display: flex; justify-content: center; align-items: center;} 
+.notification .circle::before {
+  content: '\2713';   /*Checkmark symbol*/
+  font-size: 3rem;
+  color: #fff;
+}
+
+.notification .message {
+  font-size: 1rem;
+  font-weight: bold;
+  color:  #000;
+  margin: 10px;
+}
+
+/* Whatsapp icon in the page  */
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1); /* Slightly enlarges the button*/
+  box-shadow:  0 6px 15px rgba(0, 0, 0, 0.3);
+}

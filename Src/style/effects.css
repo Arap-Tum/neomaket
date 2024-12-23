@@ -1,0 +1,27 @@
+/* Notification  */
+
+.notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,  -50%) scale(0);
+    width: 200px;
+    height: 200px;
+    background-color: #f7f7f7; color: #000;text-align: center;border-radius: 12px;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);opacity: 0;transition: transform 0.3s ease, opacity 0.3s ease; z-index: 1000;
+  }
+  
+  .notification.show {
+    transform: translate(-50%, -50%) scale(1); opacity: 1;
+  } .notification .circle { width: 80px; height: 80px;background-color: gold; border-radius: 50%;margin: 20px auto 10px; display: flex; justify-content: center; align-items: center;} 
+  .notification .circle::before {
+    content: '\2713';   /*Checkmark symbol*/
+    font-size: 3rem;
+    color: #fff;
+  }
+  
+  .notification .message {
+    font-size: 1rem;
+    font-weight: bold;
+    color:  #000;
+    margin: 10px;
+  }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoMkrt - About Us</title>
+
+    <!-- icons-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- style-sheet -->
+     <link rel="stylesheet" href="/Src/style/about us.css">
+     
+</head>
+<body>
+    <div class="container">
+    
+ 
+         <!-- Header -->
+         <header class="header">
+             <!-- <img src="/api/placeholder/100/50" alt="NeoMkrt Logo" class="logo"> -->
+             <h1 class="page-title">About NeoMkrt</h1>
+        </header>
+
+        <!-- Who We Are Section -->
+        <section class="section"> 
+            <h2 class="section-title">Who We Are</h2>
+            <div class="section-content">
+                <div class="section-text">
+                    <p>NeoMkrt is a revolutionary platform connecting sellers and buyers directly through WhatsApp. We bridge the gap between local businesses and customers, creating a seamless shopping experience without handling delivery or payments.</p>
+                </div>
+                <div class="section-icon">🤝</div>
+            </div>
+        </section>
+
+        <!-- What We Do Section -->
+        <section class="section">
+            <h2 class="section-title">What We Do</h2>
+            <div class="section-content">
+                <div class="section-icon">🛍️</div>
+                <div class="section-text">
+                    <p>We simplify shopping by connecting you directly with local sellers via WhatsApp. Enjoy a 25% discount on purchases made through NeoMkrt and support small businesses in your community.</p>
+                </div>
+            </div>
+            <div class="cta-buttons">
+                <a href="/pages/shop reg.html" class="cta-btn">Become Seller</a>
+                <a href="/pages/shop directory/shop pages.html" class="cta-btn">Explore Shops</a>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="section">
+            <h2 class="section-title">How It Works</h2>
+            <div class="step-process">
+                <div class="step">
+                    <div class="step-icon">1</div>
+                    <h3>Browse Shops</h3>
+                    <p>Explore local businesses on NeoMkrt</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">2</div>
+                    <h3>Add to Cart</h3>
+                    <p>Select items you want to purchase</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">3</div>
+                    <h3>WhatsApp Order</h3>
+                    <p>Complete order via WhatsApp</p>
+                </div>
+            </div>
+        </section>
+
+         <!-- Footer -->
+         <footer class="footer">
+            <p>NeoMkrt: Connecting Buyers and Sellers, Seamlessly</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon">WhatsApp</a>
+                <a href="#" class="social-icon">Email</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // Optional interactivity
+        document.querySelectorAll('.cta-btn').forEach(btn => {
+            btn.addEventListener('mouseenter', (e) => {
+                e.target.style.transform = 'scale(1.05)';
+            });
+            btn.addEventListener('mouseleave', (e) => {
+                e.target.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

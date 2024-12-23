@@ -1,0 +1,158 @@
+/* .main {
+   
+    padding: 10px;
+    max-width: 600px;
+    height: 100dvh;
+    height: auto;
+    position: absolute;
+    /* overflow-x: hidden;     
+    margin: 7em 10px  1px;
+    bottom: 20px;
+    top: 0;
+ } */
+
+ .my-cart {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f9f9f9; /* Soft background for contrast */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+ .my-cart h1 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+ }
+
+ .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Image Styling */
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+/* Product Details */
+.cart-item h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 0;
+}
+
+.cart-item p {
+    font-size: 0.9em;
+    padding: 5px;
+    color: #666;
+    margin: 2px 0;
+}
+
+/* Total Section Styling */
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 20px;
+    padding-top: 15px;
+
+    border-top: 2px solid #e0e0e0;
+    color: #333;
+}
+.total-price {
+    color: #daa520; /* Gold color */
+}
+
+/* Button Styling */
+button {
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+/* Review and Purchase Button */
+.purchase {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #daa520; /* Gold color */
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.purchase:hover {
+    background-color: #b58910; /* Darker gold on hover */
+}
+
+/* Remove Button */
+.cart-item button {
+    background-color: #ff6666; /* Soft red for remove */
+    color: white;
+    padding: 5px 10px;
+}
+.cart-item button:hover {
+    background-color: #cc5252; /* Darker red on hover */
+}
+
+/* Hover and Transition Effects */
+.cart-item img,
+.cart-item h2,
+.cart-item p,
+button {
+    transition: all 0.3s ease;
+}
+
+.cart-item:hover {
+    background-color: #fafafa;
+    transform: scale(1.02);
+}
+
+/* Empty Cart Message */
+.cart-items.empty {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+}
+
+/* Sticky Total Section */
+.total {
+    position: sticky;
+    bottom: 0;
+    background: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item img {
+        margin: 0 0 10px 0;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .total-price {
+        font-size: 1.5em;
+    }
+}

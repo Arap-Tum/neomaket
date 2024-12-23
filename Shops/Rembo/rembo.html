@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rembo Hub</title>
+   
+    
+     <!-- Icons -->
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  
+
+
+    <link rel="stylesheet" href="/Src/style/product styles.css">
+    <link rel="stylesheet" href="/Src/style/style.css">
+    <link rel="stylesheet" href="/Src/style/side-bar.css">
+    <link rel="stylesheet" href="/Src/style/category bar.css">
+    <link rel="stylesheet" href="/Src/style/toglebtn.css">
+    
+</head>
+<body>
+    <!-- Header Section  -->
+    <header>
+        <!-- Toggle button  --> 
+        <div class="toggle-btn" >
+            <i class="icon">☰</i>
+        </div>
+
+        <div class="header-container">
+            <div class="logo">Rembo Hub</div>
+        </div> 
+
+        
+      </header>
+
+    <div class="top-container">
+        
+
+         <!-- sidebar -->
+         <div class="sidebar"></div>
+        
+         
+         
+         <!-- THE TOP BAR - search bar, cart  -->
+           <div class="top-bar">
+               <div class="search-bar">
+                   <input type="text" placeholder="I'm looking for..." />
+                   <span class="search-icon"><i class="fas fa-search"></i></span>
+                </div>                
+             <a class="cart" href="cart.html">
+                      <i class="icon ph-bold ph-shopping-cart"></i>
+                      <span class="cart-count">0</span>
+              </a>
+                
+           </div>
+       
+         <!-- Scrool side bar -->
+        <div class="scroll-bar">
+           <div class="categories">
+               <div class="category-item">All</div>  
+               <div class="category-item">watch</div> 
+               <div class="category-item">neclase</div> 
+
+           </div>
+        </div>
+
+        <!-- the side bar -->
+
+    </div>
+    
+
+    <!-- All the product listing  -->
+    <div class="listProduct"></div>
+    
+
+    <!-- success notification  -->
+    <div id="successNotification" class="notification">
+        <div class="circle"></div>
+        <div class="message"></div>
+    </div>
+
+    <!-- Whatsapp notification -->
+    <a href="https://wa.me/+254797147667 " class="whatsapp-button pulse-animation" target="blank"><i class="ph-bold ph-whatsapp-logo">whatsapp</i></a>
+
+
+    <script src="listProduct.JS"></script>
+    <script src="/Src/script/shopsSidebar.js"></script>
+    
+</body>
+</html>

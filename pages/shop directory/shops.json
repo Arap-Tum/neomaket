@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Rembo Hub",
+        "logo":  "logo/Rembo Hub.jpg",
+        "owner": "Furaha Pease",
+        "location": "Mombasa",
+        "contact": " 0797 147667",
+        "category": "Jewlery, Cosmetic, Beauty",
+        "topProducts": ["push Back way", "OMG band/head band", "watch", "brooch"],
+        "rating" :4.8,
+        "url" : "../Shops/Rembo/rembo.html"
+    },
+    {
+        "name": "Chambi's Thrifty Store",
+        "logo":  "logo/chambis logo.jpg",
+        "owner": "Chambi",
+        "location": "Mombasa",
+        "contact": " 0743998887",
+        "category": "Clothes",
+        "topProducts": ["T-shits", "Dress", "Shirt", "  Socks"],
+        "rating" :4.8,
+        "url" : "../Shops/Chambis/chambi.html"
+    },
+    {
+        "name": "Mweg@rts",
+        "logo":  "",
+        "owner": "Elias Mwega",
+        "location": "Mombasa",
+        "contact": "072435502",
+        "category": "Clothes",
+        "topProducts": ["T-shits", "", "", ""],
+        "rating" :4.8,
+        "url" : "#"
+    },
+
+    {
+        "name": "",
+        "logo":  "",
+        "owner": "",
+        "location": "Mombasa",
+        "contact": "",
+        "category": "",
+        "topProducts": ["", "", "", ""],
+        "rating" :4.8,
+        "url" : "../pages/shop reg.html"
+    }
+]

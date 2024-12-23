@@ -1,0 +1,40 @@
+
+:root {
+    --gold: #D4AF37;
+}
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, var(--gold));
+    margin: 10px;
+    padding: 10px;
+}
+.cart .icon {
+    font-size: 1.5rem;
+   }
+   .cart {
+      position: absolute;
+      right: 50px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #000;
+    }
+    .cart-count {
+      background-color: gold;
+      color: white;
+      font-size: 12px;
+      padding: 2px 5px;
+      border-radius: 50%;
+      margin-left: 5px;
+    }
+
+.exit  .arrow{
+    font-size: 20px;
+}
+
+.exit .arrow:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+}
