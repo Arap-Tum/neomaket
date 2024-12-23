@@ -83,7 +83,7 @@ const phoneNumber = "254743998885"
 
 function sendToWhatsApp() {
     const cart =JSON.parse(localStorage.getItem('cart')) || []
-    const baseUrl = "http://127.0.0.1:5500/img/2%20(1).jpg";//Replace with your website URL
+    const baseUrl = "https://incomparable-clafoutis-2bf44e.netlify.app/";//Replace with your website URL
 
 
     let message = 'Hello I would like to order:\n\n';
