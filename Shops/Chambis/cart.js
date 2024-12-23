@@ -86,9 +86,10 @@ function sendToWhatsApp() {
 
     let message = 'Hello I would like to order:\n\n';
     cart.forEach(item => {
+        // Only encode the filename, not the full path
+        const encodedImage = `img/${encodeURIComponent(item.image.split('/').pop())}`;
         message += `(${item.quantity}). ${item.name} - ${item.price} each\n`;
-        // Encode the image URL to handle spaces or special characters
-        message += `image: ${baseUrl}${encodeURIComponent(item.image)}\n\n`;
+        message += `image: ${baseUrl}${encodedImage}\n\n`;
     });
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message.trim())}`;
@@ -98,6 +99,12 @@ function sendToWhatsApp() {
     // Clear cart after sending
     clearCart();
 }
+
+function clearCart() {
+    console.log("Cart cleared");
+    localStorage.removeItem('cart');
+}
+
 // function sendToWhatsApp() {
 //     const cart = JSON.parse(localStorage.getItem('cart')) || [];
 //     const baseUrl = "https://incomparable-clafoutis-2bf44e.netlify.app/"; // Replace with your website URL
