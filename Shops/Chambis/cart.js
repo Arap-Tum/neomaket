@@ -89,8 +89,8 @@ function sendToWhatsApp() {
     let message = 'Hello I would like to order:\n\n';
     cart.forEach(item => {
         message += `(${item.quantity}). ${item.name} - ${item.price} each\n`;
-        message += `image: ${baseUrl}${item.image}\n\n`; //include image link //full image url
-
+        // message += `image: ${baseUrl}${item.image}\n\n`; //include image link //full image url
+        message += `image: ${baseUrl}${encodeURIComponent(item.image)}`; 
     });
     
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message.trim())}`;
