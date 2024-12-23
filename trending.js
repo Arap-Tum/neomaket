@@ -8,8 +8,8 @@ fetch('trending.json')
 let trendingProduct = document.querySelector(".product-grid");
 
 const phoneNumbers = {
-    "Rembo Hub": "254769047082", 
-    "Chambis store": "254725338050"
+    "Rembo Hub": "254797147667", 
+    "Chambis store": "254743998885"
 };
 
 function addTrendingProduct() {
