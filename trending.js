@@ -41,13 +41,14 @@ function addTrendingProduct() {
 function sendToWhatsApp(product) {
     const shopName = product.shop.trim();
     const phoneNumber = phoneNumbers[shopName];
+    const baseUrl = "https://incomparable-clafoutis-2bf44e.netlify.app/"
 
     if (phoneNumber) {
         let message = `Hello, I would like to order the following:\n\n`;
         message += `Product: ${product.name}\n`;
         message += `Price: ${product.price}\n`;
         message += `Description: ${product.description}\n`;
-        message += `Image: ${product.img}`;
+        message += `Image:${baseUrl}${product.img}\n\n`;
 
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message.trim())}`;
         window.open(whatsappUrl, '_blank');
