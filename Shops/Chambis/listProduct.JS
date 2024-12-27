@@ -141,7 +141,7 @@ function addToCart(productId) {
     const product = products.find(p => p.id === productId);
     if (!product) return;
 
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cart = JSON.parse(localStorage.getItem('chambis_cart')) || [];
     const existingProduct = cart.find(item => item.id === productId);
 
     if (existingProduct) {
@@ -150,14 +150,15 @@ function addToCart(productId) {
         cart.push({...product, quantity: 1});
     }
 
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('chambis_cart', JSON.stringify(cart));
+    console.log("Cart after adding item:", cart);
     showSuccessNotification(product.name)
     updateCartCount();
 }
 
 // Update cart count display
 function updateCartCount() {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cart = JSON.parse(localStorage.getItem('chambis_cart')) || [];
     const cartCount = document.querySelector('.cart-count');
     const count = cart.reduce((count, item) => count + item.quantity, 0)
 

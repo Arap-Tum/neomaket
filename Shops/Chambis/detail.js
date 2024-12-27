@@ -102,7 +102,7 @@ function addToCart(productId) {
 const product = products.find(p => p.id === productId);
 if (!product) return;
 
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let cart = JSON.parse(localStorage.getItem('chambis_cart')) || [];
 const existingProduct = cart.find(item => item.id === productId);
 
 if (existingProduct) {
@@ -111,14 +111,14 @@ existingProduct.quantity++;
 cart.push({ ...product, quantity: 1 });
 }
 
-localStorage.setItem('cart', JSON.stringify(cart));
+localStorage.setItem('chambis_cart', JSON.stringify(cart));
 showSuccessNotification(product.name)
 updateCartCount();
 }
 
 // Update cart count display
 function updateCartCount() {
-const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const cart = JSON.parse(localStorage.getItem('chambis_cart')) || [];
 const cartCount = document.querySelector('.cart-count');
 if (cartCount) {
 cartCount.textContent = cart.reduce((count, item) => count + item.quantity, 0);

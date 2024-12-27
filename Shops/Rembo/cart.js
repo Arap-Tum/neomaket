@@ -1,5 +1,5 @@
 function loadCart() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cart = JSON.parse(localStorage.getItem('rembo_cart')) || [];
     const cartContainer = document.querySelector('.cart-items');
     cartContainer.innerHTML = '';
     let grandTotal = 0;
@@ -43,14 +43,14 @@ function loadCart() {
 }
 
 function removeFromCart(productId) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cart = JSON.parse(localStorage.getItem('rembo_cart')) || [];
     cart = cart.filter(item => item.id !== productId);
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('rembo_cart', JSON.stringify(cart));
     loadCart();
 }
 
 function clearCart() {
-    localStorage.removeItem('cart');
+    localStorage.removeItem('rembo_cart');
     loadCart();
 }
 
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const phoneNumber = "254797147667";
 
 function sendToWhatsApp() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cart = JSON.parse(localStorage.getItem('rembo_cart')) || [];
     const baseUrl = "https://neomaket.co.ke/";
 
     let message = 'Hello I would like to order:\n\n';
@@ -83,10 +83,7 @@ function sendToWhatsApp() {
     clearCart();
 }
 
-function clearCart() {
-    console.log("Cart cleared");
-    localStorage.removeItem('cart');
-}
+
 
 
 document.querySelector('.purchase').addEventListener('click', sendToWhatsApp);

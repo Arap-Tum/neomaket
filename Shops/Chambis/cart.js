@@ -1,6 +1,7 @@
 
 function loadCart() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cart = JSON.parse(localStorage.getItem('chambis_cart')) || [];
+    // localStorage.setItem('chambi_cart', JSON.stringify(cart));
     const cartContainer = document.querySelector('.cart-items');
     cartContainer.innerHTML = '';
     let grandTotal = 0;
@@ -44,14 +45,15 @@ function loadCart() {
 }
 
 function removeFromCart(productId) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cart = JSON.parse(localStorage.getItem('chambis_cart')) || [];
+    console.log("Cart contents:", cart)
     cart = cart.filter(item => item.id !== productId);
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('chambis_cart', JSON.stringify(cart));
     loadCart();
 }
 
 function clearCart() {
-    localStorage.removeItem('cart');
+    localStorage.removeItem('chambis_cart');
     loadCart();
 }
 
@@ -64,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const phoneNumber = "254743998885";
 
 function sendToWhatsApp() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cart = JSON.parse(localStorage.getItem('chambis_cart')) || [];
     const baseUrl = "https://neomaket.co.ke/";
 
     let message = 'Hello I would like to order:\n\n';
@@ -84,10 +86,7 @@ function sendToWhatsApp() {
     clearCart();
 }
 
-function clearCart() {
-    console.log("Cart cleared");
-    localStorage.removeItem('cart');
-}
+
 
 
 document.querySelector('.purchase').addEventListener('click', sendToWhatsApp);
