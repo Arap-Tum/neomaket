@@ -67,5 +67,21 @@
              
       ],
       "category": "Accessories"
+   },
+   {
+      "id": 5,
+      "name": "Watch",
+      "price": 1000,
+      "description": "Available in Gold and silver",
+      "number": 5,
+      "images": [
+            "https://i.ibb.co/GJc6F9S/Watch.jpg",
+             "https://i.ibb.co/xfQnTtW/Watch-2.jpg",
+             "https://i.ibb.co/p1KJjKX/Watch-3.jpg",
+             "https://i.ibb.co/jGZfnWD/Watch-4.jpg",
+             "https://i.ibb.co/029vVSr/Watch-5.jpg"
+             
+      ],
+      "category": "Accessories"
    }
 ]

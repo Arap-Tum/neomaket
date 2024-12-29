@@ -24,7 +24,7 @@ function addDataToHTML() {
 
             theProduct.innerHTML = `
                 <img src="${product.images[0]}" alt="">
-                <h2>${product.name}</h2>
+                <p class="name">${product.name}</p>
                 <div class="price"> ksh ${product.price}</div>
                 <p class="stock">Only ${product.number} left in stock</p>
             `;

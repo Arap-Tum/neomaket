@@ -50,7 +50,12 @@ body {
     color: #575757;
 }
 .listProduct .item h2 {
-    font-weight: 500;
+    font-weight: 200;
+ }
+
+ .listProduct .item .name {
+    font-weight: 600;
+    color: black;
  }
  .listProduct .add-to-cart {
     border: none;
@@ -75,6 +80,7 @@ body {
 
   .listProduct .stock {
     font-size: 13px;
+    color: #575757;
   }
   
 

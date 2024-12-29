@@ -35,7 +35,8 @@ function removeFromCart(productId) {
 }
 
 function clearCart() {
-    localStorage.removeItem('rembo_cart');
+//    JSON.parse(localStorage.removeItem('rembo_cart'));
+   localStorage.removeItem('rembo_cart')
     loadCart();
 }
 
