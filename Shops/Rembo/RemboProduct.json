@@ -41,5 +41,18 @@
                "img/watch 8.jpg"
         ],
         "category": "Jewlery"
-     }
+     },
+     {
+      "id": 3,
+      "name": "Push Back waya",
+      "price": 200,
+      "description": "Amaizing way to style your hair ",
+      "number": 8,
+      "images": [
+            "https://i.ibb.co/9g1Ywp8/Push-Back-waya.jpg",
+             "https://i.ibb.co/fqjpwG9/Push-Back-Waya-2.jpg",
+             "https://i.ibb.co/zb4mVpz/Push-Back-waya-2.jpg"
+      ],
+      "category": "Accessories"
+   }
 ]
