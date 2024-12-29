@@ -1,55 +1,37 @@
-
 function loadCart() {
     const cart = JSON.parse(localStorage.getItem('chambis_cart')) || [];
-    // localStorage.setItem('chambi_cart', JSON.stringify(cart));
     const cartContainer = document.querySelector('.cart-items');
     cartContainer.innerHTML = '';
     let grandTotal = 0;
 
-    // added
+    // Loop through cart items and populate the cart display
     cart.forEach(item => {
-        // Remove 'ksh ' prefix and commas, and parse to a float
-        const priceString = item.price.replace('ksh ', '').replace(',', '').trim(); // Trim to remove extra spaces
-        const price = parseFloat(priceString); // Parse to number
-    
-        if (isNaN(price)) {
-            console.error(`Invalid price format for item: ${item.name}`);
-        }
-    
+        const price = parseFloat(item.price); // Ensure price is a number
         const quantity = parseInt(item.quantity, 10); // Ensure quantity is a number
-    
-        if (isNaN(quantity)) {
-            console.error(`Invalid quantity for item: ${item.name}`);
-        }
-    
         const itemTotal = price * quantity; // Calculate total
         grandTotal += itemTotal;
-    
+
         cartContainer.innerHTML += `
             <div class="cart-item">
-                <img src="${item.image}" alt="${item.name}" width="50">
+                <img src="${item.selectedImage}" alt="${item.name}" width="50">
                 <h2>${item.name}</h2>
-                <p>Price: ${item.price}</p>
-                <p>Quantity: ${item.quantity}</p>
-                <p>ksh ${itemTotal.toFixed(2)}</p>
+                <p>Price: ksh ${price.toFixed(2)}</p>
+                <p>Quantity: ${quantity}</p>
+                <p>Total: ksh ${itemTotal.toFixed(2)}</p>
                 <button onclick="removeFromCart(${item.id})">Remove</button>
             </div>
         `;
     });
-    
 
-    
+    // Update grand total
     document.querySelector('.total-price').innerText = `ksh ${grandTotal.toFixed(2)}`;
-
-    
 }
 
 function removeFromCart(productId) {
     let cart = JSON.parse(localStorage.getItem('chambis_cart')) || [];
-    console.log("Cart contents:", cart)
     cart = cart.filter(item => item.id !== productId);
     localStorage.setItem('chambis_cart', JSON.stringify(cart));
-    loadCart();
+    loadCart(); // Refresh cart display
 }
 
 function clearCart() {
@@ -57,41 +39,43 @@ function clearCart() {
     loadCart();
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadCart();
-    document.querySelector('.purchase').addEventListener('click', sendToWhatsApp);
-
-});
-
+// Send cart items to WhatsApp
 const phoneNumber = "254743998885";
 
 function sendToWhatsApp() {
     const cart = JSON.parse(localStorage.getItem('chambis_cart')) || [];
-    const baseUrl = "https://neomaket.co.ke/";
 
-    let message = 'Hello I would like to order:\n\n';
+    if (cart.length === 0) {
+        alert("Your cart is empty! Add items before proceeding.");
+        return;
+    }
+
+    let message = 'Hello, I would like to order:\n\n';
     
     cart.forEach(item => {
-        message += `Product:  ${item.quantity}, ${item.name}\n`;
-        message += `Price: ksh.${item.price} each\n`;
-         message += `Description: ${item.description}\n\n`;
-        //  message += `Image:${baseUrl}${item.img}\n\
+        console.log(item);
+        message += `Product: ${item.name}\n`;
+        message += `Quantity: ${item.quantity}\n`;
+        message += `Price: ksh ${item.price} each\n`;
+         message += `Image: ${item.selectedImage}\n\n`;
     });
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message.trim())}`;
-    console.log("WhatsApp URL:", whatsappUrl); // Debug: Check generated URL
     window.open(whatsappUrl, '_blank');
 
     // Clear cart after sending
     clearCart();
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    loadCart();
+    const purchaseButton = document.querySelector('.purchase');
+    if (purchaseButton) {
+        purchaseButton.addEventListener('click', sendToWhatsApp);
+    }
+});
 
-
-
-document.querySelector('.purchase').addEventListener('click', sendToWhatsApp);
-
-
+// Go back functionality
 function goBack() {
     window.history.back();
 }

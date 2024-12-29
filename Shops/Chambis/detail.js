@@ -1,43 +1,83 @@
-
 let products = null;
 
 // Fetch data from JSON file
 fetch('chambiProduct.json')
-.then(response => response.json())
-.then(data => {
-products = data;
-showDetail();
-});
+    .then(response => response.json())
+    .then(data => {
+        products = data;
+        showDetail();
+    });
 
 function showDetail() {
-const detail = document.querySelector('.detail');
-const productId = new URLSearchParams(window.location.search).get('id');
+    const detail = document.querySelector('.detail');
+    const productId = new URLSearchParams(window.location.search).get('id');
+    const thisProduct = products.find(value => value.id == productId);
 
-const thisProduct = products.find(value => value.id == productId);
+    // If no product matches the ID, redirect to home
+    if (!thisProduct) {
+        window.location.href = "/";
+        return;
+    }
 
-// If no product matches the ID, redirect to home
-if (!thisProduct) {
-window.location.href = "/";
-return;
-}
+    // Populate product details dynamically with slideshow
+    detail.innerHTML = `
+        <div class="slideshow">
+            ${thisProduct.images.map((img, index) => `
+                <div class="slide ${index === 0 ? 'active' : ''}">
+                    <img src="${img}" alt="${thisProduct.name}">
+                </div>
+            `).join('')}
+            <div class="slide-nav">
+                <button onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i><</button>
+                <button onclick="changeSlide(1)"><i class="fas fa-chevron-right">></i></button>
+            </div>
+        </div>
+        <div class="content">
+            <h1 class="name">${thisProduct.name}</h1>
+            <div class="price">$${thisProduct.price}</div>
+            <div class="description">${thisProduct.description}</div>
+            <p class="stock">Only ${thisProduct.number} left in stock</p>
+            <button class="addCart">Add to Cart <i class="icon ph-bold ph-shopping-cart"></i></button>
+            <div class="reviews">
+                <p>Customer Reviews</p>
+                <span class="stars">★★★★☆</span>
+            </div>
+        </div>
+    `;
 
-// Populate product details
-detail.querySelector('.image img').src = thisProduct.image;
-detail.querySelector('.name').innerText = thisProduct.name;
-detail.querySelector('.price').innerText =  thisProduct.price;
-detail.querySelector('.description').innerText = thisProduct.description;
-detail.querySelector('.stock').innerText = `Only ${thisProduct.number} left in stock`;
+    // Initialize slideshow functionality
+    initSlideshow();
 
-// Set up Add to Cart button for the main product
-const addToCartButton = document.querySelector('.addCart');
-addToCartButton.addEventListener('click', (event) => {
-event.preventDefault();
-addToCart(thisProduct.id); // Correctly reference thisProduct.id
-});
+    // Set up Add to Cart button
+    const addToCartButton = detail.querySelector('.addCart');
+    addToCartButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        addToCart(thisProduct.id);
+    });
 
-// Show similar products
+    // // Initialize slideshow functionality
+    // initSlideshow();
+
+    // Show similar products
 showSimilarProducts(thisProduct);
 }
+
+function initSlideshow() {
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    function changeSlide(direction) {
+        slides[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + direction + slides.length) % slides.length;
+        slides[currentIndex].classList.add('active');
+    }
+
+    document.querySelector('.slide-nav button:nth-child(1)').onclick = () => changeSlide(-1);
+    document.querySelector('.slide-nav button:nth-child(2)').onclick = () => changeSlide(1);
+
+}
+
+
 function showSimilarProducts(currentProduct) {
 const listProduct = document.querySelector('.listProduct');
 listProduct.innerHTML = ""; // Clear previous content
@@ -47,7 +87,7 @@ const similarProducts = products.filter(product =>
 product.category === currentProduct.category && product.id !== currentProduct.id
 );
 
-// Display similar products
+// Display similar products 
 similarProducts.forEach(product => {
 const newProduct = document.createElement('div');
 newProduct.classList.add('item');
@@ -56,10 +96,10 @@ const theProduct = document.createElement('a');
 theProduct.href = './detail.html?id=' + product.id;
 
 theProduct.innerHTML = `
-    <img src="${product.image}" alt="${product.name}">
-    <h2>${product.name}</h2>
-    <div class="price">${product.price}</div>
-    <p class="stock">Only ${product.number} left in stock</p>
+<img src="${product.images[0]}" alt="">
+<h2>${product.name}</h2>
+<div class="price"> ksh ${product.price}</div>
+<p class="stock">Only ${product.number} left in stock</p>
 `;
 
 const addToCartButton = document.createElement('button');
@@ -77,24 +117,7 @@ newProduct.appendChild(addToCartButton);
 listProduct.appendChild(newProduct); // Append to the list
 });
 }
-//Function to show sliding notification
-let notificationTimeout; //Declare a global variable to store the timeout ID
 
-function  showNotification(productName) {
-const notificationPanel = document.getElementById('notification-panel');
-const notificationMessage = document.getElementById('notification-message');
-
-notificationMessage.textContent = `${productName} has been added to the cart`;
-notificationPanel.classList.add('show');
-
-//clear any exixting timeout to prevent overlap
-if(notificationTimeout) clearTimeout(notificationTimeout);
-
-//Hide the notification after 3 seconds
-notificationTimeout = setTimeout( () => {
-notificationPanel.classList.remove('show');
-}, 3000);
-}
 
 
 // Add item to cart
@@ -102,13 +125,17 @@ function addToCart(productId) {
 const product = products.find(p => p.id === productId);
 if (!product) return;
 
+const activeImage = document.querySelector('.slide.active img') ? document.querySelector('.slide.active img').src : product.images[0]; //get the curently active image
+
 let cart = JSON.parse(localStorage.getItem('chambis_cart')) || [];
 const existingProduct = cart.find(item => item.id === productId);
 
 if (existingProduct) {
 existingProduct.quantity++;
+existingProduct.selectedImage = activeImage; //update the selected image 
 } else {
-cart.push({ ...product, quantity: 1 });
+cart.push({ ...product, quantity: 1, selectedImage: activeImage});
+
 }
 
 localStorage.setItem('chambis_cart', JSON.stringify(cart));

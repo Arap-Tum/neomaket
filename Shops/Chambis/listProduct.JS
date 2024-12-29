@@ -23,9 +23,9 @@ function addDataToHTML() {
 
 
             theProduct.innerHTML = `
-                <img src="${product.image}" alt="">
+                <img src="${product.images[0]}" alt="">
                 <h2>${product.name}</h2>
-                <div class="price">ksh ${product.price}</div>
+                <div class="price"> ksh ${product.price}</div>
                 <p class="stock">Only ${product.number} left in stock</p>
             `;
 
@@ -46,108 +46,22 @@ function addDataToHTML() {
         });
     }
 }
-/* Search Bar*/
-const searchInput = document.querySelector('.search-bar input');
-
-searchInput.addEventListener('input', () => {
-    const query = searchInput.value.toLowerCase();; //get the searchto be converted to lower case
-    const filterdProducts = products.filter(product => product.name.toLowerCase().includes(query) // filter products whose name includes the query
-    );
-
-    //clear the current displayed products
-    listProductHTML.innerHTML= '';
-
-    //display the filtered products
-    filterdProducts.forEach(product => {
-        let newProduct =document.createElement ('div')
-        newProduct.classList.add('item');
-
-        let theProduct = document.createElement('a');
-        theProduct.href = './detail.html?id=' + product.id;
-
-        theProduct.innerHTML = `
-                <img src="${product.image}" alt="">
-                <h2>${product.name}</h2>
-                <div class="price">ksh ${product.price}</div>
-                <p class="stock"> Only ${product.number} left in stock </p>
-            `
-            let addToCartButton = document.createElement('button');
-            addToCartButton.classList.add('add-to-cart');
-            addToCartButton.textContent = 'Add to Cart';
-            addToCartButton.setAttribute('data-id', products.id);
-
-             addToCartButton.addEventListener('click', (event)=> {
-              event.preventDefault();
-                event.stopPropagation();
-              addToCart(product.id);
-    });
-    newProduct.appendChild(theProduct);
-    newProduct.appendChild(addToCartButton);
-    listProductHTML.appendChild(newProduct);
-    
-    });   
-});
-
-/*Select category item and the list product container */
- const categoryItems = document.querySelectorAll('.category-item');
-
- categoryItems.forEach(categoryItem => {
-    categoryItem.addEventListener('click', () => {
-        const SelectedCategory = categoryItem.textContent; //Get the category name from clicked items
-        filterByCategory(SelectedCategory);
-    });
- });
- function filterByCategory(category) {
-    const listProduct = document.querySelector('.listProduct');
-    listProduct.innerHTML = ""; //Clear previous products
-
-    //filter products by selected category 
-    const filteredProducts = products.filter(product => product.category === category || category === 'All');
-
-    //Display filtered products
-    filteredProducts.forEach(product => {
-        const newProduct = document.createElement ('div');
-        newProduct.classList.add('item');
-
-        const theProduct = document.createElement('a');
-        theProduct.href = './detail.html?id=' + product.id;
-
-        theProduct.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
-            <h2>${product.name}</h2>
-            <div class="price">ksh ${product.price}</div>
-            <p class="stock">Only ${product.number} left in stock</p>
-        `;
-        
-        const addToCartButton = document.createElement('button');
-        addToCartButton.classList.add('add-to-cart');
-        addToCartButton.textContent = 'Add to Cart';
-        addToCartButton.setAttribute('data-id', product.id);
-
-        addToCartButton.addEventListener('click', (event) => {
-            event.preventDefault();
-            addToCart(product.id);
-        });
-        newProduct.appendChild(theProduct);
-        newProduct.appendChild(addToCartButton);
-        listProduct.appendChild(newProduct);
-    });
- }
-
-
 
 // Add item to cart
 function addToCart(productId) {
     const product = products.find(p => p.id === productId);
     if (!product) return;
 
+    const activeImage = product.images[0]; //get the top image 
+
     let cart = JSON.parse(localStorage.getItem('chambis_cart')) || [];
     const existingProduct = cart.find(item => item.id === productId);
 
     if (existingProduct) {
         existingProduct.quantity++;
+        existingProduct.selectedImage = activeImage; //update the selected image
     } else {
-        cart.push({...product, quantity: 1});
+        cart.push({...product, quantity: 1, selectedImage:activeImage});
     }
 
     localStorage.setItem('chambis_cart', JSON.stringify(cart));
@@ -168,7 +82,6 @@ function updateCartCount() {
 
 document.addEventListener('DOMContentLoaded', updateCartCount);
 
-
 //function to show  success notification
 function showSuccessNotification(productName) {
     const notification = document.getElementById('successNotification');
@@ -185,10 +98,6 @@ function showSuccessNotification(productName) {
         notification.classList.remove('show');
 
     }, 3000)
-}
-
-
-
-
+} 
 
 
