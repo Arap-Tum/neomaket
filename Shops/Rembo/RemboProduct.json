@@ -83,5 +83,21 @@
              
       ],
       "category": "Jewlery"
+   },
+   {
+      "id": 6,
+      "name": "Brooch",
+      "price": 150,
+      "description": "Choose your style",
+      "number": 4,
+      "images": [
+           
+           " https://i.ibb.co/FnmL0BV/Brooch-3.jpg",
+            "https://i.ibb.co/ZJGnpFg/Brooch-2.jpg",
+            "https://i.ibb.co/GpkKgVr/Brooch.jpg",
+            "https://i.ibb.co/kQQyyKr/Brooch-4.jpg"
+             
+      ],
+      "category": "Jewlery"
    }
 ]
