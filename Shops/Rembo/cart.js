@@ -56,7 +56,7 @@ function sendToWhatsApp() {
         console.log(item);
         message += `Product: ${item.name}\n`;
         message += `Quantity: ${item.quantity}\n`;
-        message += `Price: ksh ${item.price} each\n\n`;
+        message += `Price: ksh ${item.price} each\n`;
          message += `Image: ${item.selectedImage}\n\n`;
     });
 
