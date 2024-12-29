@@ -43,7 +43,7 @@ function clearCart() {
 const phoneNumber = "254797147667";
 
 function sendToWhatsApp() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cart = JSON.parse(localStorage.getItem('rembo_cart')) || [];
 
     if (cart.length === 0) {
         alert("Your cart is empty! Add items before proceeding.");
