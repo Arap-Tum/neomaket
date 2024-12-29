@@ -34,7 +34,7 @@ function showDetail() {
         </div>
         <div class="content">
             <h1 class="name">${thisProduct.name}</h1>
-            <div class="price">$${thisProduct.price}</div>
+            <div class="price"> ksh ${thisProduct.price}</div>
             <div class="description">${thisProduct.description}</div>
             <p class="stock">Only ${thisProduct.number} left in stock</p>
             <button class="addCart">Add to Cart <i class="icon ph-bold ph-shopping-cart"></i></button>
