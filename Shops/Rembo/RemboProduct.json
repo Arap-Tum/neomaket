@@ -54,5 +54,18 @@
              "https://i.ibb.co/zb4mVpz/Push-Back-waya-2.jpg"
       ],
       "category": "Accessories"
+   },
+   {
+      "id": 4,
+      "name": "OMG band / head band",
+      "price": 250,
+      "description": "Amaizing way to style your hair ",
+      "number": 16,
+      "images": [
+            "https://i.ibb.co/zJcksMS/OMG-band.jpg",
+             "https://i.ibb.co/1zHxKVq/OMG-band-2.jpg"
+             
+      ],
+      "category": "Accessories"
    }
 ]
