@@ -96,11 +96,11 @@ const theProduct = document.createElement('a');
 theProduct.href = './detail.html?id=' + product.id;
 
 theProduct.innerHTML = `
-<img src="${product.images[0]}" alt="">
-<h2>${product.name}</h2>
-<div class="price"> ksh ${product.price}</div>
-<p class="stock">Only ${product.number} left in stock</p>
-`;
+                <img src="${product.images[0]}" alt="">
+                <p class="name">${product.name}</p>
+                <div class="price"> ksh ${product.price}</div>
+                <p class="stock">Only ${product.number} left in stock</p>
+            `;
 
 const addToCartButton = document.createElement('button');
 addToCartButton.classList.add('add-to-cart');
