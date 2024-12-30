@@ -99,5 +99,254 @@
              
       ],
       "category": "Jewlery"
+   },
+   {
+      "id": 7,
+      "name": "Earrings",
+      "price":100 ,
+      "description": "Elegant and stylish earrings designed to add a touch of charm and sophistication to any outfit.",
+      "number": 4,
+      "images": [
+           
+           "https://i.ibb.co/v48MSft/Earings-8.jpg",
+            "https://i.ibb.co/RNxmS8H/Earings-7.jpg",
+            "https://i.ibb.co/fDy8K5w/Earings-6.jpg",
+            "https://i.ibb.co/wQHwSYb/Earings-5.jpg",
+            "https://i.ibb.co/V3ZB5DW/Earings-4.jpg",
+            "https://i.ibb.co/qswVwpS/Earings-3.jpg",
+            "https://i.ibb.co/vmT1X1b/Earings-2.jpg",
+            "https://i.ibb.co/rt1ZwHq/Earings.jpg"
+             
+      ],
+      "category": "Jewlery"
+   },
+   {
+      "id": 8,
+      "name": "Kitchen towel",
+      "price": 100,
+      "description": "Soft and absorbent kitchen towel, perfect for drying dishes and cleaning up spills",
+      "number": 4,
+      "images": [
+           
+           "https://i.ibb.co/WpY6902/Kitchen-towel.jpg"           
+      ],
+      "category": "Accessories"
+   },
+   {
+      "id": 9,
+      "name": "Side clips",
+      "price": 100,
+      "description": "Stylish side clips to keep your hair neat and secure with ease",
+      "number": 15,
+      "images": [
+           
+           "https://i.ibb.co/F5cryL1/Side-clips-3.jpg",
+            "https://i.ibb.co/2hjwBdr/Side-clips-2.jpg",
+            "https://i.ibb.co/tQv3twx/Side-clips.jpg"
+              
+      ],
+      "category": "Jewlery"
+   },
+   {
+      "id": 10,
+      "name": "Eye linear",
+      "price": 200,
+      "description": "Smooth and long-lasting eyeliner for a bold and defined look",
+      "number": 4,
+      "images": [
+           
+           "https://i.ibb.co/svmh0zP/Eye-liner.jpg"            
+      ],
+      "category": "Accessories"
+   },
+   {
+      "id": 11,
+      "name": "Air Freshener",
+      "price": 300,
+      "description": "Refreshing air freshener to keep your space smelling clean and pleasant.",
+      "number": 10,
+      "images": [
+           
+           "https://i.ibb.co/WpSTcfV/Air-freshener.jpg"
+             
+      ],
+      "category": "Accessories"
+   },
+   {
+      "id": 12,
+      "name": "Lip balm",
+      "price": 100,
+      "description": "Moisturizing lip balm for soft and hydrated lips all day.",
+      "number": 2,
+      "images": [
+           
+           "https://i.ibb.co/9nT57GT/lip-balm-2.jpg",
+            "https://i.ibb.co/j6T8SNK/Lip-balm.jpg"
+       
+             
+      ],
+      "category": "Beauty"
+   },
+   {
+      "id": 13,
+      "name": "Fascinator/Flower cap",
+      "price": 450,
+      "description": "Elegant fascinator/flower cap, perfect for enhancing your look at special events.",
+      "number": 3,
+      "images": [
+           
+           "https://i.ibb.co/wSxpDPb/Fascinator-3.jpg",
+            "https://i.ibb.co/1XHt7k9/Fascinator-2.jpg",
+            "https://i.ibb.co/YW2rpj6/Fascinator.jpg"
+             
+      ],
+      "category": "Beauty"
+   },
+   {
+      "id": 14,
+      "name": "Bath  Cloth",
+      "price": 200,
+      "description": "Soft and gentle bath cloth for a refreshing and effective cleanse",
+      "number": 4,
+      "images": [
+           
+           "https://i.ibb.co/Lh95ydf/Bath-cloth.jpg"             
+      ],
+      "category": "Accessories"
+   },
+   {
+      "id": 15,
+      "name": "Scarf with flower",
+      "price": 250,
+      "description": "Chic scarf with a delicate flower design, adding a touch of elegance to any outfit.",
+      "number": 4,
+      "images": [
+           
+           "https://i.ibb.co/BKw4dvQ/Scarf-with-Flowers.jpg"
+      ],
+      "category": "Beauty"
+   },
+   {
+      "id": 16,
+      "name": "Cute keyholder/ Liquid Keyholder",
+      "price": 300,
+      "description": "Fun and unique keyholder with a cute design, perfect for organizing your keys in style",
+      "number": 4,
+      "images": [
+           
+           "https://i.ibb.co/kyLV8nw/Cute-Keyholder.jpg",
+           "https://i.ibb.co/TRn759X/Cute-keyholder-2.jpg",
+           "https://i.ibb.co/6N7w6mz/Cute-keyholder-3.jpg",
+           "https://i.ibb.co/VWpjx7N/cute-keyholder-4.jpg"
+             
+      ],
+      "category": "Accessories"
+   },
+   {
+      "id": 17,
+      "name": "Van cleef bracelet",
+      "price":350 ,
+      "description": "Elegant Van Cleef bracelet featuring a timeless design, perfect for adding a touch of luxury to any outfit",
+      "number": 4,
+      "images": [
+           
+           "https://i.ibb.co/4d7WSfk/Vaan-cleef-bracelet.jpg"             
+      ],
+      "category": "Beauty"
+   },
+   {
+      "id": 18,
+      "name": "Douled sized hair styling brush",
+      "price":150 ,
+      "description": "Double-sized hair styling brush for quick and easy detangling, perfect for all hair types",
+      "number": 4,
+      "images": [
+           
+           "https://i.ibb.co/cLYQ1sM/Double-sized-hair-styling-brush.jpg"
+           
+             
+      ],
+      "category": "Accessories"
+   },
+   {
+      "id": 19,
+      "name": "Mtandio pins",
+      "price":150 ,
+      "description": "Available in Gold and silver and any other color",
+      "number": 4,
+      "images": [
+           
+           "https://i.ibb.co/ncTy5fm/mtandio-pins.jpg"
+             
+      ],
+      "category": "Beauty"
+   },
+   {
+      "id": 20,
+      "name": "Hair rolls",
+      "price":370 ,
+      "description": "Soft hair rolls designed to add volume and curls, perfect for creating stylish, bouncy hair",
+      "number": 20,
+      "images": [
+           
+           "https://i.ibb.co/r646fYR/hair-rolls.jpg"
+             
+      ],
+      "category": "Beauty"
+   },
+   {
+      "id": 21,
+      "name": "Body Scrub/ Cofee salt Scrub",
+      "price":400,
+      "description": "Revitalizing body scrub with coffee and salt, exfoliates and smooths skin while leaving a refreshing scent.",
+      "number": 3,
+      "images": [
+           
+           "https://i.ibb.co/1mCkB6j/cofee-salt-scrub.jpg"
+             
+      ],
+      "category": "Beauty"
+   },
+   {
+      "id": 22,
+      "name": "Peel off mask",
+      "price": 300,
+      "description": "Gentle peel-off mask that removes impurities, leaving your skin refreshed and glowing.",
+      "number": 4,
+      "images": [
+           
+           "https://i.ibb.co/52b3t8P/peel-off-mask.jpg",
+           "https://i.ibb.co/kMBk8nV/peel-off-mask-2.jpg",
+           "https://i.ibb.co/0ZcVChK/peel-of-mask.jpg"
+             
+      ],
+      "category": "Beauty"
+   },
+   {
+      "id":23 ,
+      "name": "Mascara",
+      "price": 150,
+      "description": "Volumizing mascara for longer, fuller lashes that make your eyes stand out.",
+      "number": 8,
+      "images": [
+           
+           "https://i.ibb.co/XjjwyCR/Mascara.jpg"
+             
+      ],
+      "category": "Beauty"
+   },
+   {
+      "id": 24,
+      "name": "Body Spray/ Body Splash",
+      "price":250 ,
+      "description": "Refreshing body spray/splash that provides a light, long-lasting fragrance to keep you feeling fresh all day",
+      "number": 7,
+      "images": [
+           
+           "https://i.ibb.co/MNYXYy0/Body-spray.jpg",
+           "https://i.ibb.co/VMxmm0V/Body-spray-2.jpg"
+             
+      ],
+      "category": "Accessories"
    }
 ]
