@@ -1,6 +1,7 @@
 
 let shops = null;
-const baseUrl ="https://incomparable-clafoutis-2bf44e.netlify.app/"
+// const baseUrl ="https://incomparable-clafoutis-2bf44e.netlify.app/"
+const baseUrl ="https://neomaket.co.ke/"
 
 // Fetch shops from JSON file
 fetch('shops.json') 
