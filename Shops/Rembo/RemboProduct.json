@@ -1,47 +1,5 @@
 [
- {
-    "id": 1,
-    "name": "Neclace",
-    "price": 200,
-    "description": "All good neclaces",
-    "number": 11,
-    "images": [
-     
-        
-            "img/neclase 2.jpg ",
-            "img/neclase 3.jpg",
-            "img/neclase 4.jpg",
-            "img/neclase LV 2.jpg",
-            "img/neclase lv.jpg",
-            "img/neclase.jpg",
-            "img/neclases 2.jpg",
-            "img/neclases 3.jpg",
-            "img/neclases 5.jpg",
-            "img/neclases 6.jpg"
-            
-    ],
-    "category": "Jewlery"
- },
- {
-        "id": 2,
-        "name": "Men's Watch",
-        "price": 400,
-        "description": "All good watches",
-        "number": 8,
-        "images": [
-         
-               "img/watch 1.jpg",
-               "img/watch 2.jpg",
-               "img/watch 3.jpg",
-               "img/watch 4.jpg",
-               "img/watch 4.jpg",
-               "img/watch 5.jpg",
-               "img/watch 6.jpg",
-               "img/watch 7.jpg",
-               "img/watch 8.jpg"
-        ],
-        "category": "Jewlery"
-     },
+ 
      {
       "id": 3,
       "name": "Push Back waya",
