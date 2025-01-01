@@ -7,10 +7,10 @@
         "shop": "Chambis store"
     },
     {
-        "name":"Watch",
-        "img": "img-trending/watch 1.jpg",
-        "price": ".0",
-        "description" : "talk with the seler",
+        "name":"Push Back waya",
+        "img": "https://i.ibb.co/9g1Ywp8/Push-Back-waya.jpg",
+        "price": "ksh 200",
+        "description" : "Amaizing way to style your hair ",
         "shop": "Rembo Hub"
     },
     {
@@ -21,10 +21,10 @@
         "shop": "Chambis store"
     },
     {
-        "name":"Watch",
-        "img": "img-trending/watch 4.jpg",
-        "price": "0.0",
-        "description" : "talk with the seler",
+        "name":"OMG band",
+        "img": "https://i.ibb.co/zJcksMS/OMG-band.jpg",
+        "price": "ksh 250",
+        "description" : "OMG with style",
         "shop": "Rembo Hub"
     },
     {
@@ -36,9 +36,9 @@
     },
     {
         "name":"Watch",
-        "img": "img-trending/watch 2.jpg",
-        "price": "0.0",
-        "description" : "talk with the seler",
+        "img": "https://i.ibb.co/xfQnTtW/Watch-2.jpg",
+        "price": "ksh 1000",
+        "description" : "Available in Gold and silver",
         "shop": "Rembo Hub"
     }
     
