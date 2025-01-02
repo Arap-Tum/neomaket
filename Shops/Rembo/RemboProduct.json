@@ -307,4 +307,174 @@
       ],
       "category": "Accessories"
    }
+   ,
+   {
+      "id":25,
+      "name": "Buffer",
+      "price": 100,
+      "description": "Buffer for smooth, shiny nails, perfect for polishing and finishing your manicure.",
+      "number": 40,
+      "images": [
+           
+           "https://i.ibb.co/W0fB1vS/Buffer.jpg",
+           "https://i.ibb.co/bKd5Hv6/Buffer-2.jpg"
+             
+      ],
+      "category": "Accessories"
+   },
+   {
+      "id": 26,
+      "name": "Baby hair clips",
+      "price":250 ,
+      "description": "Soft, gentle clips to keep your baby’s hair neat and stylish",
+      "number":20 ,
+      "images": [
+           
+           "https://i.ibb.co/GVLH5rn/Baby-Hair-clips.jpg",
+           "https://i.ibb.co/7p150Bm/Baby-hair-clips-2.jpg",
+           "https://i.ibb.co/SKFbjkq/Baby-hair-clips-3.jpg",
+           "https://i.ibb.co/M76yKLS/Baby-hair-clips-4.jpg",
+           "https://i.ibb.co/kyjNM2W/Baby-hair-clips-5.jpg",
+           "https://i.ibb.co/Hxr4KkG/Baby-Hair-clips-6.jpg"
+             
+      ],
+      "category": "Beauty"
+   },
+   {
+      "id": 27,
+      "name": "Double pendant chain",
+      "price": 400,
+      "description": "Elegant double pendant chain, perfect for layering and adding a touch of style.",
+      "number": 10,
+      "images": [
+           
+           "https://i.ibb.co/q7w8XxG/Double-pendant-chain.jpg",
+           "https://i.ibb.co/ZcM4Q9x/Double-pendant-chain-3.jpg",
+           "https://i.ibb.co/9V6B8Zg/Double-pendant-chain-4.jpg",
+           "https://i.ibb.co/nwMLCst/Double-pendant-chain-5.jpg",
+           "https://i.ibb.co/zmW9rMm/Double-pendant-chain-2.jpg"
+             
+      ],
+      "category": "Beauty"
+   },
+   {
+      "id": 28,
+      "name": "Shampoo",
+      "price": 100,
+      "description": "Cleanse and nourish your hair with this refreshing shampoo for soft, healthy locks",
+      "number": 7,
+      "images": [
+           
+           "https://i.ibb.co/hWqpLLD/shampoo.jpg",
+           "https://i.ibb.co/grr11fv/shampoo-2.jpg"
+             
+      ],
+      "category": "Accessories"
+   },
+   {
+      "id": 29,
+      "name": "Head wrap / Scarf",
+      "price": 250,
+      "description": "Versatile head wrap/scarf, perfect for styling and protecting your hair.",
+      "number": 10,
+      "images": [
+           
+           "https://i.ibb.co/sjGLn3k/Head-wrap-2.jpg",
+           "https://i.ibb.co/Jc4jcDd/Head-wrap.jpg",
+           "https://i.ibb.co/y51DP2n/Head-wrap-3.jpg",
+           "https://i.ibb.co/N7FtkkM/Head-wrap-4.jpg",
+           "https://i.ibb.co/3p0NVRJ/Head-wrap-5.jpg"
+             
+      ],
+      "category": "Beauty"
+   },
+   {
+      "id": 30,
+      "name": "Wig Combs",
+      "price": 300,
+      "description": "Durable wig combs for easy styling and maintenance of your wig.",
+      "number": 3,
+      "images": [
+           
+           "https://i.ibb.co/0c84TRB/Wig-Combs.jpg"
+             
+      ],
+      "category": "Accessories"
+   },
+   {
+      "id": 31,
+      "name": "Bathing Gloves",
+      "price": 100,
+      "description": "Soft, exfoliating gloves for a refreshing and smooth shower experience.",
+      "number": 20,
+      "images": [
+           
+               "https://i.ibb.co/Hzd9CVg/Bathing-Gloves.jpg"
+             
+      ],
+      "category": "Accessories"
+   },
+   {
+      "id": 32,
+      "name": "Stainless Chain",
+      "price": 250,
+      "description": "Durable stainless steel chain, perfect for everyday wear and lasting style.",
+      "number": 10,
+      "images": [
+           
+           "https://i.ibb.co/6NnW68M/Stainless-Chain.jpg",
+           "https://i.ibb.co/ZLfSy0M/Stainless-Chain-3.jpg",
+           "https://i.ibb.co/bX78Ybk/Stainless-Chain-5.jpg",
+           "https://i.ibb.co/WpYTbm7/Stainless-Chain-4.jpg",
+           "https://i.ibb.co/vvVmHPF/Stainless-Chain-6.jpg",
+           "https://i.ibb.co/QrvDCkh/Stainless-Chain-2.jpg"
+             
+      ],
+      "category": "Beauty"
+   },
+   {
+      "id": 33,
+      "name": "Baby Turban",
+      "price": 250,
+      "description": "Soft and stylish turban, designed for your babys comfort and cuteness.",
+      "number": 10,
+      "images": [
+           
+           "https://i.ibb.co/DD0srsM/toto-caps.jpg",
+           "https://i.ibb.co/c8SWgNG/toto-caps-2.jpg"
+             
+      ],
+      "category": "Accessories"
+   },
+   {
+      "id": 34,
+      "name": "Poshi / Pocket key holder ",
+      "price": 250,
+      "description": "Compact and sleek key holder, perfect for keeping your keys organized on the go",
+      "number": 10,
+      "images": [
+           
+           "https://i.ibb.co/9YLmkrP/poshi-4.jpg",
+           "https://i.ibb.co/Qvc2mYn/Poshi-2.jpg",
+           
+           "https://i.ibb.co/pwVT9Lc/Poshi-3.jpg"
+             
+      ],
+      "category": "Accessories"
+   },
+   {
+      "id": 35,
+      "name": "Bonnet",
+      "price": 300,
+      "description": "Protect your hair in style with this soft, comfortable bonnet",
+      "number": 10,
+      "images": [
+           
+           "https://i.ibb.co/wKgzYN7/bonnet.jpg"
+             
+      ],
+      "category": "Beauty"
+   }
+ 
+
 ]
